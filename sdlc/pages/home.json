@@ -11,20 +11,21 @@
           "cssClasses": "d-block container mt-3",
           "children": [
             {
-              "classId": "DeckContainerComponent",
+              "classId": "TabContainerComponent",
               "children": [
                 {
-                  "name": "bbus-panel-container-ang-1",
+                  "title": "RouterNavigateStore",
+                  "route": "one",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
                   "children": [
                     {
                       "classId": "ProductSummaryAccountSelectorWidgetComponent",
-											"output.selectedAccount": "navigation:bbus-panel-container-ang-1"
+                      "output.selectedAccount": "router.navigate one {selectedAccount}"
                     },
                     {
                       "classId": "PanelContainerComponent",
-                      "cssClasses": "d-block mt-5",
+                      "cssClasses": "d-block mt-3",
                       "children": [
                         {
                           "classId": "TransactionsListWidgetComponent"
@@ -33,11 +34,51 @@
                     }
                   ]
                 },
-                {
-                  "name": "bbus-panel-container-ang-2",
+								{
+                  "title": "RouterNavigateStore SubRoute",
+                  "route": "two",
                   "classId": "PanelContainerComponent",
-                  "cssClasses": "d-block py-5 bg-secondary",
-                  "children": []
+                  "cssClasses": "d-block",
+                  "children": [
+                    {
+                      "classId": "ProductSummaryAccountSelectorWidgetComponent",
+                      "output.selectedAccount": "router.navigate two subroute {selectedAccount}"
+                    },
+                    {
+                      "classId": "PanelContainerComponent",
+                      "cssClasses": "d-block mt-3",
+                      "children": [
+                        {
+													"classId": "DeckContainerComponent",
+													"children": [
+														{
+															"route": "content",
+															"classId": "PanelContainerComponent",
+															"cssClasses": "d-block",
+															"children": [
+																{
+																	"classId": "ContentWidgetComponent",
+																	"content-defaultContent": {
+																		"kind": "content",
+																		"path": "subroute.json"
+																	}
+																}
+															]
+														},
+														{
+															"route": "subroute",
+															"classId": "PanelContainerComponent",
+															"children": [
+																{
+																	"classId": "TransactionsListWidgetComponent"
+																}
+															]
+														}
+													]
+												}
+                      ]
+                    }
+                  ]
                 }
               ]
             }

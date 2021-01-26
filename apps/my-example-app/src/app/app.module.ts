@@ -10,7 +10,8 @@ import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 
 import { ContainersModule } from "@backbase/universal-ang/containers";
-import { ProductSummaryWidgetAccountSelectorModule } from "@backbase/retail-ang/product-summary";
+import { ContentWidgetModule } from '@backbase/universal-ang/content';
+import { ProductSummaryWidgetAccountSelectorModule, ProductSummaryDetailsWidgetModule } from "@backbase/retail-ang/product-summary";
 import { TransactionsListWidgetModule } from "@backbase/retail-ang/transactions";
 
 @NgModule({
@@ -23,7 +24,9 @@ import { TransactionsListWidgetModule } from "@backbase/retail-ang/transactions"
     BackbaseCoreModule,
     RouterModule.forRoot([], { initialNavigation: false, useHash: true }),
     ContainersModule,
+		ContentWidgetModule,
     ProductSummaryWidgetAccountSelectorModule,
+		ProductSummaryDetailsWidgetModule,
     TransactionsListWidgetModule
   ],
   providers: [...(environment.mockProviders || [])],
