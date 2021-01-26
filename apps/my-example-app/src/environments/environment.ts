@@ -10,7 +10,27 @@ const services: ExternalServices = {};
 const pageModel: Item = {
   name: 'app-container',
   properties: {},
-  children: [],
+  children: [{
+      name: 'memory-store-log',
+      properties: {
+        classId: 'MemoryStoreLogComponent'
+      }
+    }, {
+      name: 'memory-store-form',
+      properties: {
+        classId: 'MemoryStoreFormComponent'
+      }
+    }, {
+      name: 'memory-store-widget',
+      properties: {
+        classId: 'MemoryStoreWidgetComponent'
+      }
+    }, {
+      name: 'transactions-list-extended',
+      properties: {
+        classId: 'TransactionsListExtendedComponent'
+      }
+    }],
 };
 
 export const environment: Environment = {

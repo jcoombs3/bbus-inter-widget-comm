@@ -54,16 +54,8 @@
 														{
 															"route": "content",
 															"classId": "PanelContainerComponent",
-															"cssClasses": "d-block",
-															"children": [
-																{
-																	"classId": "ContentWidgetComponent",
-																	"content-defaultContent": {
-																		"kind": "content",
-																		"path": "subroute.json"
-																	}
-																}
-															]
+															"cssClasses": "d-block py-5 bg-primary",
+															"children": []
 														},
 														{
 															"route": "subroute",
@@ -71,6 +63,104 @@
 															"children": [
 																{
 																	"classId": "TransactionsListWidgetComponent"
+																}
+															]
+														}
+													]
+												}
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "RouteParamsStore",
+                  "route": "three",
+                  "classId": "PanelContainerComponent",
+                  "cssClasses": "d-block",
+                  "children": [
+                    {
+                      "classId": "ProductSummaryAccountSelectorWidgetComponent",
+                      "output.selectedAccount": "route-param selectedAccount"
+                    },
+                    {
+                      "classId": "PanelContainerComponent",
+                      "cssClasses": "d-block mt-3",
+                      "children": [
+                        {
+                          "classId": "TransactionsListWidgetComponent",
+													"input.selectedAccountId": "route-param selectedAccount"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Memory",
+                  "route": "four",
+                  "classId": "PanelContainerComponent",
+                  "cssClasses": "d-block",
+                  "children": [
+                    {
+                      "classId": "ProductSummaryAccountSelectorWidgetComponent",
+                      "output.selectedAccount": "memory selectedAccount"
+                    },
+										{
+                      "classId": "PanelContainerComponent",
+                      "cssClasses": "d-block mt-3",
+                      "children": [
+                        {
+													"classId": "DeckContainerComponent",
+													"children": [
+														{
+															"route": "content",
+															"classId": "PanelContainerComponent",
+															"cssClasses": "d-block py-5 bg-primary",
+															"children": []
+														},
+														{
+															"route": "subroute",
+															"classId": "PanelContainerComponent",
+															"children": [
+																{
+																	"classId": "TransactionsListWidgetComponent",
+																	"input.selectedAccountId": "memory selectedAccount"
+																},
+																{
+																	"classId": "PanelContainerComponent",
+																	"cssClasses": "d-block mt-3",
+																	"children": [
+																		{
+																			"classId": "MemoryStoreFormComponent",
+																			"input.selectedAccountId": "memory selectedAccount",
+																			"output.submitAccountInfo": "memory submittedAccountInfo"
+																		}
+																	]
+																},
+																{
+																	"classId": "PanelContainerComponent",
+																	"cssClasses": "d-block mt-3",
+																	"children": [
+																		{
+																			"classId": "DeckContainerComponent",
+																			"children": [
+																				{
+																					"classId": "PanelContainerComponent",
+																					"cssClasses": "d-block py-3 bg-primary",
+																					"children": []
+																				},
+																				{
+																					"route": "account-info",
+																					"classId": "PanelContainerComponent",
+																					"children": [
+																						{
+																							"classId": "MemoryStoreLogComponent",
+																							"input.submittedAccountInfo": "memory submittedAccountInfo"
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
 																}
 															]
 														}

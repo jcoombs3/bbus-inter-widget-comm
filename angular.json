@@ -117,7 +117,7 @@
               "browserTarget": "my-example-app:build:production"
             },
             "aymme": {
-							"proxyConfig": "proxy.conf.aymme.js",
+              "proxyConfig": "proxy.conf.aymme.js",
               "browserTarget": "my-example-app:build:aymme"
             }
           }
@@ -178,6 +178,74 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/my-example-app-e2e/tsconfig.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "memory-store-form": {
+      "root": "libs/memory-store-form",
+      "sourceRoot": "libs/memory-store-form/src",
+      "projectType": "library",
+      "prefix": "bbus",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/memory-store-form/test.ts",
+            "karmaConfig": "./karma.conf.js",
+            "polyfills": "apps/my-example-app/src/polyfills.ts",
+            "tsConfig": "./tsconfig.spec.json",
+            "environment": "dev",
+            "codeCoverage": true,
+            "codeCoverageExclude": [
+              "test.ts",
+              "**/polyfills.ts"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "files": [
+              "libs/memory-store-form/**/*.ts"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "memory-store-log": {
+      "root": "libs/memory-store-log",
+      "sourceRoot": "libs/memory-store-log/src",
+      "projectType": "library",
+      "prefix": "bbus",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/memory-store-log/test.ts",
+            "karmaConfig": "./karma.conf.js",
+            "polyfills": "apps/my-example-app/src/polyfills.ts",
+            "tsConfig": "./tsconfig.spec.json",
+            "environment": "dev",
+            "codeCoverage": true,
+            "codeCoverageExclude": [
+              "test.ts",
+              "**/polyfills.ts"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "files": [
+              "libs/memory-store-log/**/*.ts"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
