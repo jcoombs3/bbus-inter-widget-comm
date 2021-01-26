@@ -1,0 +1,11 @@
+{
+	"extends": "container-bb-manageable-area",
+	"children": [
+		{
+			"extends": "bbus-my-example-app-ang",
+			"AppConfig.googleAPIKey": "",
+			"area": "0",
+			"children": []
+    }
+  ]
+}
