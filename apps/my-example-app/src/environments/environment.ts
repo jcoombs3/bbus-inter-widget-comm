@@ -11,6 +11,11 @@ const pageModel: Item = {
   name: 'app-container',
   properties: {},
   children: [{
+      name: 'memory-store-log',
+      properties: {
+        classId: 'MemoryStoreLogComponent'
+      }
+    }, {
       name: 'memory-store-form',
       properties: {
         classId: 'MemoryStoreFormComponent'

@@ -13,6 +13,7 @@ import { ContainersModule } from '@backbase/universal-ang/containers';
 import { ProductSummaryWidgetAccountSelectorModule } from '@backbase/retail-ang/product-summary';
 import { TransactionsListWidgetModule } from '@backbase/retail-ang/transactions';
 import { MemoryStoreFormModule } from '@bbus/memory-store-form';
+import { MemoryStoreLogModule } from '@bbus/memory-store-log';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,7 +27,8 @@ import { MemoryStoreFormModule } from '@bbus/memory-store-form';
     ContainersModule,
     ProductSummaryWidgetAccountSelectorModule,
     TransactionsListWidgetModule,
-    MemoryStoreFormModule
+    MemoryStoreFormModule,
+    MemoryStoreLogModule
   ],
   providers: [...(environment.mockProviders || [])],
   bootstrap: [AppComponent]

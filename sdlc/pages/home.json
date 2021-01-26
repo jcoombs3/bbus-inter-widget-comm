@@ -124,6 +124,43 @@
 																{
 																	"classId": "TransactionsListWidgetComponent",
 																	"input.selectedAccountId": "memory selectedAccount"
+																},
+																{
+																	"classId": "PanelContainerComponent",
+																	"cssClasses": "d-block mt-3",
+																	"children": [
+																		{
+																			"classId": "MemoryStoreFormComponent",
+																			"input.selectedAccountId": "memory selectedAccount",
+																			"output.submitAccountInfo": "memory submittedAccountInfo"
+																		}
+																	]
+																},
+																{
+																	"classId": "PanelContainerComponent",
+																	"cssClasses": "d-block mt-3",
+																	"children": [
+																		{
+																			"classId": "DeckContainerComponent",
+																			"children": [
+																				{
+																					"classId": "PanelContainerComponent",
+																					"cssClasses": "d-block py-3 bg-primary",
+																					"children": []
+																				},
+																				{
+																					"route": "account-info",
+																					"classId": "PanelContainerComponent",
+																					"children": [
+																						{
+																							"classId": "MemoryStoreLogComponent",
+																							"input.submittedAccountInfo": "memory submittedAccountInfo"
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
 																}
 															]
 														}

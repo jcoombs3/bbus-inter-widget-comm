@@ -1,0 +1,25 @@
+<ng-container *ngIf="selectedAccountId">
+	<hr />
+	<p>Notice that <strong>OOTB Transactions List Widget</strong> does not respond to <strong class="text-info">memory</strong>. It is configured to look at route parameters. However, we are able to send the selectedAccountId to multiple widgets (here). Let's fill out some data, and send an even bigger object to another widget using <strong class="text-info">memory</strong></p>
+	<p class="text-info"><strong>selectedAccountId</strong>:&nbsp;{{selectedAccountId}}</p>
+
+	<div class="mt-3">
+		<form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+			<div class="form-group">
+				<label class="d-block">
+					Account Name:
+					<input class="form-control" type="text" formControlName="name">
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label class="d-block">
+					Account Owner:
+					<input class="form-control" type="text" formControlName="owner">
+				</label>
+			</div>
+
+			<button class="btn btn-primary" type="submit" [disabled]="!accountForm.valid">Submit</button>
+		</form>
+	</div>
+</ng-container>
