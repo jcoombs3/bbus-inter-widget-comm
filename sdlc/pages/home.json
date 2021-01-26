@@ -16,16 +16,28 @@
                 {
                   "name": "bbus-panel-container-ang-1",
                   "classId": "PanelContainerComponent",
-                  "cssClasses": "d-block py-5 bg-primary",
+                  "cssClasses": "d-block",
                   "children": [
+                    {
+                      "classId": "ProductSummaryAccountSelectorWidgetComponent",
+											"output.selectedAccount": "navigation:bbus-panel-container-ang-1"
+                    },
+                    {
+                      "classId": "PanelContainerComponent",
+                      "cssClasses": "d-block mt-5",
+                      "children": [
+                        {
+                          "classId": "TransactionsListWidgetComponent"
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
                   "name": "bbus-panel-container-ang-2",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block py-5 bg-secondary",
-                  "children": [
-                  ]
+                  "children": []
                 }
               ]
             }
