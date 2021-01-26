@@ -104,14 +104,31 @@
                       "classId": "ProductSummaryAccountSelectorWidgetComponent",
                       "output.selectedAccount": "memory selectedAccount"
                     },
-                    {
+										{
                       "classId": "PanelContainerComponent",
                       "cssClasses": "d-block mt-3",
                       "children": [
                         {
-                          "classId": "TransactionsListExtendedComponent",
-													"input.selectedAccountId": "memory selectedAccount"
-                        }
+													"classId": "DeckContainerComponent",
+													"children": [
+														{
+															"route": "content",
+															"classId": "PanelContainerComponent",
+															"cssClasses": "d-block py-5 bg-primary",
+															"children": []
+														},
+														{
+															"route": "subroute",
+															"classId": "PanelContainerComponent",
+															"children": [
+																{
+																	"classId": "TransactionsListWidgetComponent",
+																	"input.selectedAccountId": "memory selectedAccount"
+																}
+															]
+														}
+													]
+												}
                       ]
                     }
                   ]

@@ -185,16 +185,16 @@
         }
       }
     },
-    "transactions-list-extended": {
-      "root": "libs/transactions-list-extended",
-      "sourceRoot": "libs/transactions-list-extended/src",
+    "memory-store-form": {
+      "root": "libs/memory-store-form",
+      "sourceRoot": "libs/memory-store-form/src",
       "projectType": "library",
       "prefix": "bbus",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/transactions-list-extended/test.ts",
+            "main": "libs/memory-store-form/test.ts",
             "karmaConfig": "./karma.conf.js",
             "polyfills": "apps/my-example-app/src/polyfills.ts",
             "tsConfig": "./tsconfig.spec.json",
@@ -210,41 +210,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "files": [
-              "libs/transactions-list-extended/**/*.ts"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "memory-store-widget": {
-      "root": "libs/memory-store-widget",
-      "sourceRoot": "libs/memory-store-widget/src",
-      "projectType": "library",
-      "prefix": "bbus",
-      "architect": {
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/memory-store-widget/test.ts",
-            "karmaConfig": "./karma.conf.js",
-            "polyfills": "apps/my-example-app/src/polyfills.ts",
-            "tsConfig": "./tsconfig.spec.json",
-            "environment": "dev",
-            "codeCoverage": true,
-            "codeCoverageExclude": [
-              "test.ts",
-              "**/polyfills.ts"
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "files": [
-              "libs/memory-store-widget/**/*.ts"
+              "libs/memory-store-form/**/*.ts"
             ],
             "exclude": [
               "**/node_modules/**"

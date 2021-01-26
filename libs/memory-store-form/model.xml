@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalog>
   <widget>
-    <name>bbus-transactions-list-extended-ang</name>
+    <name>bbus-memory-store-form-ang</name>
     <properties>
       <property name="classId">
-        <value>TransactionsListExtendedComponent</value>
+        <value>MemoryStoreFormComponent</value>
       </property>
       <property name="src">
         <value>$(itemRoot)/index.html</value>
@@ -13,16 +13,13 @@
         <value>render-bb-widget-3</value>
       </property>
       <property name="title" label="Title" readonly="true" viewHint="admin,designModeOnly">
-        <value type="string">TransactionsListExtended Widget</value>
+        <value type="string">MemoryStoreForm Widget</value>
       </property>
       <property name="thumbnailUrl">
         <value>$(itemRoot)/icon.png</value>
       </property>
       <property name="label">
-        <value>Angular TransactionsListExtended Widget</value>
-      </property>
-      <property name="input.selectedAccount" viewHint="text-input,admin,designModeOnly">
-        <value type="string">route-param selectedAccount</value>
+        <value>Angular MemoryStoreForm Widget</value>
       </property>
     </properties>
   </widget>

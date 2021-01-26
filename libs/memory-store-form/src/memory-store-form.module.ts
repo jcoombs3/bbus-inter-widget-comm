@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
-import { MemoryStoreWidgetComponent } from './memory-store-widget.component';
+import { MemoryStoreFormComponent } from './memory-store-form.component';
 
 @NgModule({
-  declarations: [MemoryStoreWidgetComponent],
+  declarations: [MemoryStoreFormComponent],
   imports: [
     CommonModule,
     BackbaseCoreModule.withConfig({
-      classMap: { MemoryStoreWidgetComponent }
+      classMap: { MemoryStoreFormComponent }
     })
   ]
 })
-export class MemoryStoreWidgetModule { }
+export class MemoryStoreFormModule { }
