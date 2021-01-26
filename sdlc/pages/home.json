@@ -1,11 +1,37 @@
 {
-	"extends": "container-bb-manageable-area",
-	"children": [
-		{
-			"extends": "bbus-my-example-app-ang",
-			"AppConfig.googleAPIKey": "",
-			"area": "0",
-			"children": []
+  "extends": "container-bb-manageable-area",
+  "children": [
+    {
+      "extends": "bbus-my-example-app-ang",
+      "AppConfig.googleAPIKey": "",
+      "area": "0",
+      "children": [
+        {
+          "classId": "PanelContainerComponent",
+          "cssClasses": "d-block container mt-3",
+          "children": [
+            {
+              "classId": "DeckContainerComponent",
+              "children": [
+                {
+                  "name": "bbus-panel-container-ang-1",
+                  "classId": "PanelContainerComponent",
+                  "cssClasses": "d-block py-5 bg-primary",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "bbus-panel-container-ang-2",
+                  "classId": "PanelContainerComponent",
+                  "cssClasses": "d-block py-5 bg-secondary",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
