@@ -1,0 +1,4 @@
+{
+  "$schema": "./$schema/assets/SC_Unit_RichText.json",
+  "content": "<p>This communicates between widgets using the route parameters in the browser URL. Navigation is configured by setting the target route.</p><p>This example shows you can navigate directly to a subroute, where <strong>transactions</strong> is configured. Select a product to continue.</p>"
+}

@@ -59,7 +59,24 @@ const pageConfig = () => ({
 
 const portalContent = () => ({
   get: (contentRef: string) => {
-    return Promise.resolve({});
+    return new Promise((resolutionFunc, rejectionFunc) => {
+      fetch(`${pageConfig().apiRoot}/aymme-contentservices/${contentRef}`)
+        .then((res: Response) => {
+          if (res.status !== 200) {
+            throw new Error(
+              'Unexpected error: Unable to retrieve Content. Status Code: ' +
+                res.status
+            );
+          }
+          res.json().then(function(data: any) {
+            resolutionFunc(data);
+          });
+        })
+        .catch(function(err: any) {
+          console.log('Fetch Error: Unable to retrieve Content', err);
+          rejectionFunc(err);
+        });
+    });
   },
   getContent: (contentRef: string) => {
     return new Promise((resolutionFunc, rejectionFunc) => {

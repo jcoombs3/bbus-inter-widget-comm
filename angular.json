@@ -117,6 +117,7 @@
               "browserTarget": "my-example-app:build:production"
             },
             "aymme": {
+							"proxyConfig": "proxy.conf.aymme.js",
               "browserTarget": "my-example-app:build:aymme"
             }
           }

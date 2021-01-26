@@ -1,11 +1,90 @@
 {
-	"extends": "container-bb-manageable-area",
-	"children": [
-		{
-			"extends": "bbus-my-example-app-ang",
-			"AppConfig.googleAPIKey": "",
-			"area": "0",
-			"children": []
+  "extends": "container-bb-manageable-area",
+  "children": [
+    {
+      "extends": "bbus-my-example-app-ang",
+      "AppConfig.googleAPIKey": "",
+      "area": "0",
+      "children": [
+        {
+          "classId": "PanelContainerComponent",
+          "cssClasses": "d-block container mt-3",
+          "children": [
+            {
+              "classId": "TabContainerComponent",
+              "children": [
+                {
+                  "title": "RouterNavigateStore",
+                  "route": "one",
+                  "classId": "PanelContainerComponent",
+                  "cssClasses": "d-block",
+                  "children": [
+                    {
+                      "classId": "ProductSummaryAccountSelectorWidgetComponent",
+                      "output.selectedAccount": "router.navigate one {selectedAccount}"
+                    },
+                    {
+                      "classId": "PanelContainerComponent",
+                      "cssClasses": "d-block mt-3",
+                      "children": [
+                        {
+                          "classId": "TransactionsListWidgetComponent"
+                        }
+                      ]
+                    }
+                  ]
+                },
+								{
+                  "title": "RouterNavigateStore SubRoute",
+                  "route": "two",
+                  "classId": "PanelContainerComponent",
+                  "cssClasses": "d-block",
+                  "children": [
+                    {
+                      "classId": "ProductSummaryAccountSelectorWidgetComponent",
+                      "output.selectedAccount": "router.navigate two subroute {selectedAccount}"
+                    },
+                    {
+                      "classId": "PanelContainerComponent",
+                      "cssClasses": "d-block mt-3",
+                      "children": [
+                        {
+													"classId": "DeckContainerComponent",
+													"children": [
+														{
+															"route": "content",
+															"classId": "PanelContainerComponent",
+															"cssClasses": "d-block",
+															"children": [
+																{
+																	"classId": "ContentWidgetComponent",
+																	"content-defaultContent": {
+																		"kind": "content",
+																		"path": "subroute.json"
+																	}
+																}
+															]
+														},
+														{
+															"route": "subroute",
+															"classId": "PanelContainerComponent",
+															"children": [
+																{
+																	"classId": "TransactionsListWidgetComponent"
+																}
+															]
+														}
+													]
+												}
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
