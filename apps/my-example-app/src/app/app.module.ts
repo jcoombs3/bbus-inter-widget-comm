@@ -1,18 +1,22 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppComponent } from "./app.component";
-import { HttpClientModule } from "@angular/common/http";
-import { RouterModule } from "@angular/router";
-import { BackbaseCoreModule } from "@backbase/foundation-ang/core";
-import { environment } from "../environments/environment";
-import { StoreModule } from "@ngrx/store";
-import { EffectsModule } from "@ngrx/effects";
+import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { BackbaseCoreModule } from '@backbase/foundation-ang/core';
+import { environment } from '../environments/environment';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
-import { ContainersModule } from "@backbase/universal-ang/containers";
-import { ContentWidgetModule } from '@backbase/universal-ang/content';
-import { ProductSummaryWidgetAccountSelectorModule, ProductSummaryDetailsWidgetModule } from "@backbase/retail-ang/product-summary";
-import { TransactionsListWidgetModule } from "@backbase/retail-ang/transactions";
+import { ContainersModule } from '@backbase/universal-ang/containers';
+import {
+  ProductSummaryWidgetAccountSelectorModule,
+  ProductSummaryDetailsWidgetModule
+} from '@backbase/retail-ang/product-summary';
+import { TransactionsListWidgetModule } from '@backbase/retail-ang/transactions';
+import { TransactionsListExtendedModule } from '@bbus/transactions-list-extended';
+import { MemoryStoreWidgetModule } from '@bbus/memory-store-widget';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,10 +28,11 @@ import { TransactionsListWidgetModule } from "@backbase/retail-ang/transactions"
     BackbaseCoreModule,
     RouterModule.forRoot([], { initialNavigation: false, useHash: true }),
     ContainersModule,
-		ContentWidgetModule,
     ProductSummaryWidgetAccountSelectorModule,
-		ProductSummaryDetailsWidgetModule,
-    TransactionsListWidgetModule
+    ProductSummaryDetailsWidgetModule,
+    TransactionsListWidgetModule,
+    TransactionsListExtendedModule,
+    MemoryStoreWidgetModule
   ],
   providers: [...(environment.mockProviders || [])],
   bootstrap: [AppComponent]
