@@ -7,7 +7,7 @@
 2. Start Project --> Custom Project --> scroll all the way down to 'CX 6 series' and select Next 
 3. Follow the terminal commands for platform, cx6-targeting and statics. 
 4. Make sure you can access [CX Manager](http://localhost:7777/cxp-manager/login)
-5. Log in as admin. Provision the statics and portal found in this repository. bbus-content/collections/bbus-content/
+5. Log in as admin. Provision the statics and portal found in this repository. bbus-inter-widget-comm/collections/statics/
 6. cx.zip first; then portal.zip second. These are the latest packaged items from this repository in order to get you set up quickly.
 
 ### 1. AYMME
@@ -34,21 +34,4 @@ npm run start:aymme
 ```
 3. Open the project at port 4200; and you are done!
 
-Below are helpful notes along the way to understanding structured content
-
-## Structured Content
-https://community.backbase.com/documentation/experience_extend_build/6.2.10/developing_structured_content_types
-
-## content-ang // bb-content component
-```
-<ng-container *ngIf="contentItem$ | async as contentItem">
-	<bb-content-image *ngIf="contentItem.type === contentTypeImage" [imageItem]="contentItem.content" [imageClasses]="imageClasses"></bb-content-image>
-	<bb-content-html *ngIf="contentItem.type === contentTypeStructuredContent" [html]="contentItem.content.content"></bb-content-html>
-</ng-container>
-```
-
-## universal-ang -- content-widget-ang
-supports 1 image, rich text or plain text
-
-## schema types
-https://community.backbase.com/documentation/experience_extend_build/6-2-10/developing_structured_content_types#json_schema_data_type
+Here is a link to help understand [inter-widget communication](https://community.backbase.com/documentation/foundation_angular/latest/configure_communication)

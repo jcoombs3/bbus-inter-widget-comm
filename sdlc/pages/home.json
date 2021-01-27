@@ -14,14 +14,14 @@
               "classId": "TabContainerComponent",
               "children": [
                 {
-                  "title": "RouterNavigateStore",
-                  "route": "one",
+                  "title": "Router",
+                  "route": "router",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
                   "children": [
                     {
                       "classId": "ProductSummaryAccountSelectorWidgetComponent",
-                      "output.selectedAccount": "router.navigate one {selectedAccount}"
+                      "output.selectedAccount": "router.navigate router {selectedAccount}"
                     },
                     {
                       "classId": "PanelContainerComponent",
@@ -35,14 +35,14 @@
                   ]
                 },
 								{
-                  "title": "RouterNavigateStore SubRoute",
-                  "route": "two",
+                  "title": "Router SubRoute",
+                  "route": "router-subroute",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
                   "children": [
                     {
                       "classId": "ProductSummaryAccountSelectorWidgetComponent",
-                      "output.selectedAccount": "router.navigate two subroute {selectedAccount}"
+                      "output.selectedAccount": "router.navigate router-subroute subroute {selectedAccount}"
                     },
                     {
                       "classId": "PanelContainerComponent",
@@ -52,7 +52,6 @@
 													"classId": "DeckContainerComponent",
 													"children": [
 														{
-															"route": "content",
 															"classId": "PanelContainerComponent",
 															"cssClasses": "d-block py-5 bg-primary",
 															"children": []
@@ -73,8 +72,8 @@
                   ]
                 },
                 {
-                  "title": "RouteParamsStore",
-                  "route": "three",
+                  "title": "Route-Param",
+                  "route": "route-param",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
                   "children": [
@@ -96,7 +95,7 @@
                 },
                 {
                   "title": "Memory",
-                  "route": "four",
+                  "route": "memory",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
                   "children": [
@@ -161,6 +160,44 @@
 																			]
 																		}
 																	]
+																}
+															]
+														}
+													]
+												}
+                      ]
+                    }
+                  ]
+                },
+								{
+                  "title": "Custom",
+                  "route": "custom",
+                  "classId": "PanelContainerComponent",
+                  "cssClasses": "d-block",
+                  "children": [
+                    {
+                      "classId": "ProductSummaryAccountSelectorWidgetComponent",
+                      "output.selectedAccount": "custom-store-transport custom/subroute"
+                    },
+                    {
+                      "classId": "PanelContainerComponent",
+                      "cssClasses": "d-block mt-3",
+                      "children": [
+                        {
+													"classId": "DeckContainerComponent",
+													"children": [
+														{
+															"classId": "PanelContainerComponent",
+															"cssClasses": "d-block py-5 bg-primary",
+															"children": []
+														},
+														{
+															"route": "subroute",
+															"classId": "PanelContainerComponent",
+															"children": [
+																{
+																	"classId": "TransactionsListWidgetComponent",
+																	"input.selectedAccountId": "custom-store-transport"
 																}
 															]
 														}
