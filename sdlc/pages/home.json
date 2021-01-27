@@ -15,13 +15,13 @@
               "children": [
                 {
                   "title": "Router",
-                  "route": "one",
+                  "route": "router",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
                   "children": [
                     {
                       "classId": "ProductSummaryAccountSelectorWidgetComponent",
-                      "output.selectedAccount": "router.navigate one {selectedAccount}"
+                      "output.selectedAccount": "router.navigate router {selectedAccount}"
                     },
                     {
                       "classId": "PanelContainerComponent",
@@ -36,13 +36,13 @@
                 },
 								{
                   "title": "Router SubRoute",
-                  "route": "two",
+                  "route": "router-subroute",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
                   "children": [
                     {
                       "classId": "ProductSummaryAccountSelectorWidgetComponent",
-                      "output.selectedAccount": "router.navigate two subroute {selectedAccount}"
+                      "output.selectedAccount": "router.navigate router-subroute subroute {selectedAccount}"
                     },
                     {
                       "classId": "PanelContainerComponent",
@@ -73,7 +73,7 @@
                 },
                 {
                   "title": "Route-Param",
-                  "route": "three",
+                  "route": "route-param",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
                   "children": [
@@ -95,7 +95,7 @@
                 },
                 {
                   "title": "Memory",
-                  "route": "four",
+                  "route": "memory",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
                   "children": [
@@ -171,13 +171,13 @@
                 },
 								{
                   "title": "Custom",
-                  "route": "five",
+                  "route": "custom",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
                   "children": [
                     {
                       "classId": "ProductSummaryAccountSelectorWidgetComponent",
-                      "output.selectedAccount": "custom-store-transport five/transactions"
+                      "output.selectedAccount": "custom-store-transport custom/subroute"
                     },
                     {
                       "classId": "PanelContainerComponent",
@@ -192,7 +192,7 @@
 															"children": []
 														},
 														{
-															"route": "transactions",
+															"route": "subroute",
 															"classId": "PanelContainerComponent",
 															"children": [
 																{
