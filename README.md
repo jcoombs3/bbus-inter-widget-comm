@@ -7,7 +7,7 @@
 2. Start Project --> Custom Project --> scroll all the way down to 'CX 6 series' and select Next 
 3. Follow the terminal commands for platform, cx6-targeting and statics. 
 4. Make sure you can access [CX Manager](http://localhost:7777/cxp-manager/login)
-5. Log in as admin. Provision the statics and portal found in this repository. bbus-content/collections/bbus-content/
+5. Log in as admin. Provision the statics and portal found in this repository. bbus-inter-widget-comm/collections/statics/
 6. cx.zip first; then portal.zip second. These are the latest packaged items from this repository in order to get you set up quickly.
 
 ### 1. AYMME
