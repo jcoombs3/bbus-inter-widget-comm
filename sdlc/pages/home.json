@@ -14,7 +14,7 @@
               "classId": "TabContainerComponent",
               "children": [
                 {
-                  "title": "RouterNavigateStore",
+                  "title": "Router",
                   "route": "one",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
@@ -35,7 +35,7 @@
                   ]
                 },
 								{
-                  "title": "RouterNavigateStore SubRoute",
+                  "title": "Router SubRoute",
                   "route": "two",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
@@ -52,7 +52,6 @@
 													"classId": "DeckContainerComponent",
 													"children": [
 														{
-															"route": "content",
 															"classId": "PanelContainerComponent",
 															"cssClasses": "d-block py-5 bg-primary",
 															"children": []
@@ -73,7 +72,7 @@
                   ]
                 },
                 {
-                  "title": "RouteParamsStore",
+                  "title": "Route-Param",
                   "route": "three",
                   "classId": "PanelContainerComponent",
                   "cssClasses": "d-block",
@@ -161,6 +160,44 @@
 																			]
 																		}
 																	]
+																}
+															]
+														}
+													]
+												}
+                      ]
+                    }
+                  ]
+                },
+								{
+                  "title": "Custom",
+                  "route": "five",
+                  "classId": "PanelContainerComponent",
+                  "cssClasses": "d-block",
+                  "children": [
+                    {
+                      "classId": "ProductSummaryAccountSelectorWidgetComponent",
+                      "output.selectedAccount": "custom-store-transport five/transactions"
+                    },
+                    {
+                      "classId": "PanelContainerComponent",
+                      "cssClasses": "d-block mt-3",
+                      "children": [
+                        {
+													"classId": "DeckContainerComponent",
+													"children": [
+														{
+															"classId": "PanelContainerComponent",
+															"cssClasses": "d-block py-5 bg-primary",
+															"children": []
+														},
+														{
+															"route": "transactions",
+															"classId": "PanelContainerComponent",
+															"children": [
+																{
+																	"classId": "TransactionsListWidgetComponent",
+																	"input.selectedAccountId": "custom-store-transport"
 																}
 															]
 														}
