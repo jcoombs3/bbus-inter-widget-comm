@@ -34,21 +34,4 @@ npm run start:aymme
 ```
 3. Open the project at port 4200; and you are done!
 
-Below are helpful notes along the way to understanding structured content
-
-## Structured Content
-https://community.backbase.com/documentation/experience_extend_build/6.2.10/developing_structured_content_types
-
-## content-ang // bb-content component
-```
-<ng-container *ngIf="contentItem$ | async as contentItem">
-	<bb-content-image *ngIf="contentItem.type === contentTypeImage" [imageItem]="contentItem.content" [imageClasses]="imageClasses"></bb-content-image>
-	<bb-content-html *ngIf="contentItem.type === contentTypeStructuredContent" [html]="contentItem.content.content"></bb-content-html>
-</ng-container>
-```
-
-## universal-ang -- content-widget-ang
-supports 1 image, rich text or plain text
-
-## schema types
-https://community.backbase.com/documentation/experience_extend_build/6-2-10/developing_structured_content_types#json_schema_data_type
+Here is a link to help understand [inter-widget communication](https://community.backbase.com/documentation/foundation_angular/latest/configure_communication)
